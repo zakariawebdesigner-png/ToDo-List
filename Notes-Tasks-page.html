@@ -1,0 +1,385 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link href="style2.css" rel="stylesheet" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   
+  <title>Document</title>
+</head>
+<body >
+   <div class="head-part">
+      
+      <h1 class="my-todo-text" >My To Do list </h1>
+       <div class="logo"></div>
+        <button  onclick="window.location.href='index.html'"  ><a class="link">Home</a></button>
+        <button><a class="link" href="">Tasks space</a></button>
+       <button><a class="link" href="">Developer</a></button> 
+       <button id="delete-all" ><a class="link" >Delete tasks</a></button>
+      <button  onclick="window.location.href='#contact-us'"  ><a class="link" >contact us</a></button>
+      <div class="profil-bell">
+           <div class="gear" id="gearBtn"  ></div>
+              <i class="fa-solid fa-bell" ></i>
+      <div class="profile"></div>
+
+      </div>
+         </div>
+        
+    
+<h1  id="h1" class="name"></h1>
+   <div class="line"></div>
+
+   
+
+   <div class="popup-alert" id="alert">
+    <div class="part1">
+         <p class="alert-message">Alert message</p>
+         <button class="delete-alert" id="delete-alert2">x</button>
+    </div>
+       
+
+    <p id="alert-type-message">Alert!!!⚠️, this action may delete all the informations about your tasks including the non done yet , are you shure you want to continue with this ation ?</p>
+      <div class="btndiv">
+        <button class="yes" id="yes" >Yes</button>
+        <button class="no" id="no" >No</button>
+    </div>
+</div>
+
+<div class="tasks-space" id="tasks-space" >
+
+
+       
+    <div id="missions-container-id" class="missions-container glass-effect">
+           <p class="tasks-title">Tasks</p>
+         
+          <div class="creation-box" id="creation" >
+          <p >Create task</p>
+         </div>
+                   <div class="missions-container-2" id="missions-container-2"></div>
+
+    </div> 
+     
+    
+     <div class="Dashboard glass-effect"  id="Dashboard">
+          <b class="dash-text" >Dashboard</b>
+                   <div class="line-dash glass-effect "></div>
+
+           <div>
+               <p>Total: </p>
+               <p id="total-p" ></p> 
+            
+        </div>
+        <div class="line-dash glass-effect"></div>
+             <div> 
+                <p>Done:</p> 
+                    <p id="done-p"></p>
+            </div>
+                    <div class="line-dash glass-effect"></div>
+
+             <div>
+                <p>Pending:</p>
+                     <p id="pending-p"></p>
+                </div>
+                        <div class="line-dash glass-effect"></div>
+
+            <div>
+                <p>High: </p>
+                    <P id="high-p"></P>
+                </div>
+
+     </div>
+
+
+
+
+
+    
+    <div id="completed-missions-container" class="completed-missions-container glass-effect">
+                           <h2 class="completed-missions glass-effect"  >Completed Tasks</h2>
+                            <div class="arrow-div" id="arrow-div">
+                                <div class="arrow-pic" id="arrow"></div>
+                                <div class="search-and-pic" id="search-and-pic">
+                                     <div class="search-pic"></div>
+                                </div>
+                               
+                            </div>
+
+            <div id="completed-missions-list" class="completed-missions-list"> </div>
+
+      <h1 id="no-completed-text"  class="no-completed-text" >No completed Tasks</h1>
+      <h1 id="x-sign" class="x-sign" >X</h1>
+
+
+    </div>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+   
+
+   
+</div>
+<form   class="task-informations glass-effect" id="task-informations"   >
+    <div class="delete-div">
+        <button type="button" id="btn-delete" class="btn-delete" >X</button>
+    </div>
+   <div class="input1-div">
+        <p>Tasks title :</p>
+       <input id="name-task"  class="name-task glass-effect" type="text" placeholder="" maxlength="30" minlength="1"  required  >
+
+   </div>
+      <div class="input2-div">
+         <p>Tasks Date :</p>
+              <input id="date-input" class="date glass-effect" type="datetime-local" placeholder="Due date"  required  >
+
+      </div>
+   
+    <div class="input3-div">
+        <p>Priority :</p>
+         
+          <select class="priority-select glass-effect "  id="priority-select" >
+            
+            <option class="high"   >High</option>
+              <option class="medium"  >Medium</option>
+              <option class="low"   >Low</option>
+
+           </select>
+   </div>
+     
+      <div class="btn-div">
+
+              <button class="delete" type="reset" >Delete</button>
+              <button id="create" class="create" type="submit" >Create</button>
+      </div>
+  
+</form>
+
+
+</div>
+
+
+<section class="section3">
+ 
+    <div class="RevealedNote" id="RevealedNote"   >
+         <div class="btn-and-noteReveal"> 
+                <b id="notesName>RevealedNote">Note's Content</b>
+                    <button class="delete-alert3" id="delete-alert3">x</button>
+
+          </div>
+       
+        <p id="pOfReveal"   ></p>
+    </div>
+    <div class="NoteContent" id="NoteContent" >
+            <div class="NoteContentHeader">
+                <div class="NoteContentHeader-text">
+                      <p class="mynoteTitle">My Note</p>
+                    <p class="myNoteDescription">Describe what you want to remember or some details about a task</p>
+                </div>
+                <div class="backarrow" id="backarrow"></div>
+
+            </div>
+           <div class="underTitleLine"></div>
+           <div class="space-of-theContent">
+            <div class="the-content-div">
+                <p  class="the-content" id="the-content" contenteditable="true"   ></p>
+            </div>
+        </div>
+        <div class="reset-and-confirm-btns"> 
+            <button class="Confirm" id="Confirm"  >Confirm</button>
+            <button class="Reset" id="Reset"  >Reset</button>
+        </div>
+    </div>
+        <div class="NoteInformations glass-effect" id="NoteInformations">
+        <button type="button" id="btn-delete2" class="btn-delete" >X</button>
+        <div class="NoteInformations-inputs">
+            <p class="note-nameP"> Note's Name:</p>
+
+            <input class="glass-effect" id="noteName" type="text"  minlength="1" maxlength="15" required >
+              <p class="DurationP"  >Duration:</p>
+
+            <input class="glass-effect" id="datetime-local" type="datetime-local" placeholder="Note Title" minlength="1" maxlength="15" required >
+             <p class="TypeP"   >Type:</p>
+              
+        <div id="select"    class="select glass-effect"  ><p>Choose a type</p></div>  
+            
+            <div class="options-container glass-effect" id="options-container">
+                    <div class="option " id="Personal"   >Personal</div>
+                       <div class="option" id="Work" >Work</div>
+                        <div class="option" id="Ideas">Ideas</div>
+                    </div>
+                   
+                </div>
+                <div class="Note-validationBtns" id="Note-validationBtns" >
+                         <button id="Cancelbtn"   >Cancel</button>
+                          <button id="Continuebtn"  >Continue</button>
+
+                   </div>
+        </div>
+<div class="notes-container glass-effect">
+
+<div class="navigate" >
+    <div class="notes-p-logo">
+          <p class="notes-p"  >Notes  </p>
+         <div class="notes-logo"></div>
+    </div>
+    
+        <button  >Tasks space</button>
+         <button>Calender</button>
+        <button>Settings</button>
+       <div class="input-addNote">
+           <input  type="search" id="search-notes" placeholder="Search"   >
+              <i class="fa-solid fa-magnifying-glass"></i>
+           <button    >Add Note</button>
+             
+       </div>
+    
+</div>
+
+
+<div class="below-navigate">
+
+  <div class="notes-arangement-div">
+       <div class="All-notes">
+            <i class="fa-solid fa-note-sticky"></i>
+              <p class="pined-p"  >All Notes</p>
+             <div class="allnotes-num" id="allnotes-num" ></div>
+
+        </div>
+         <div class="pined">
+               <i class="fa-solid fa-thumbtack"></i>
+                 <p class="pined-p"  >Pined</p>
+               <div class="pined-num" id="pined-num"   ></div>
+
+            </div>
+    <div class="personal">
+         <i class="fa-solid fa-folder"></i>
+         <p class="personal-p"  >Personal</p>
+             <div class="personal-num" id="personal-num"   ></div>
+
+    </div>
+    
+     <div class="Work">
+<i class="fa-solid fa-briefcase"></i>          
+<p class="pined-p"  >Work</p>
+           <div class="Work-num" id="Work-num"></div>
+
+        </div>
+               <div class="ideas">
+                       <i class="fa-solid fa-lightbulb"></i>
+                        <p class="pined-p"  >Ideas</p>
+                    <div class="pined-num" id="Ideas-num"></div>
+
+               </div>
+               <div class="line2-of-deleat"></div>
+                <div class="delte" id="delte"   >
+                   <i class="fa-solid fa-trash-can"></i>
+                  </div>
+
+  
+
+
+   </div>
+
+
+   <div class="Notes-div" id="Notes-div"   >
+           <div class="notes-greeting-and-create-note-div">
+
+            <div class="salutate-div">
+                   <P class="Salutate-notes" id="Salutate-notes" ></P>
+                <p class="organize">Organize your life in a few notes</p>
+
+            </div>
+
+        <button id="addNote-btn"   >+ Add Note</button>
+      
+
+      </div>
+   <div class="Notes-holder" id="Notes-holder"  ></div>
+   </div>
+      
+
+
+
+
+
+
+</section>
+
+<div class="SettingsBar" id="SettingsBar">
+    <div class="TodoListP-image-of-Settings">
+         <p>To Do List</p>
+        <div class="logo"></div>
+    
+    </div>
+    <div class="line-Settings"></div>
+
+
+
+</div>
+
+
+
+
+
+
+<footer id="contact-us">
+    <div class="Contact-us-text">Contact us</div>
+    <div class="contact-us-box">
+        <div class="Email">
+            <p class="emaile-emogie">📧</p>
+            <p class="Email-p"> Email</p>
+             <p class="Email-p2"> You can send us your emails to ask and check about any thnig you want  and our team will respond quiqly, so , dont you hesitate and contuct us any time .</p>
+
+            <p class="Email-p3">Gymfitnessprocoache@.com</p>
+        </div>
+        <div class="line1"></div>
+        <div class="Phone">
+                        <p class="Call-emogie">☎️</p>
+
+            <p class="Call-Us"> Call Us</p>
+             <p class="Email-p4"> if you didnt manage to send emails or your wifi is bad at the moment you can us ethis phone number to call us and ask or check about any thing you want.</p>
+
+            <p class="Email-p5">+213 | 558542657</p>
+        </div>
+        <div class="line2"></div>
+        <div class="Addres">
+                 <p class="Addres-emogie">📍</p>
+
+            <p class="Addres-p"> Addres</p>
+             <p class="Addres-p6"> We are present in this addres , for any needs you can come to our location and we promice you that we will treet you as well as possible to cover all of your needs. </p>
+
+            <p class="Addres-p7">⏺ 🏢 742 Iron Forge Street</p>
+                                         <p class="Addres-p7">⏺ Suite 215</p>
+                                    <p class="Addres-p7">⏺ Los Angeles, CA 90017</p>
+                                <p class="Addres-p7">⏺ United States</p>
+            
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script src="javascript2.js" ></script>
+<script src="Notes-part.js" ></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
